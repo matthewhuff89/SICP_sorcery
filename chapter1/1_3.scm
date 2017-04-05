@@ -7,9 +7,9 @@
         ))
 
 (define (second-highest x y z)
-  (cond ((and (> x y) (< x z)) x)
-        ((and (> y x) (< y z)) y)
-        ((and (> z y) (< z x)) z) 
+  (cond ((or (and (> x y) (< x z)) (and (> x z) (< x y))) x)
+        ((or (and (> y x) (< y z)) (and (> y z) (< y x))) y)
+        ((or (and (> z y) (< z x)) (and (> z x) (< z y))) z) 
         ))
 
 (define (sum-of-largest-squares x y z) 
